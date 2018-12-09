@@ -1,0 +1,16 @@
+Clear tile with left mouse button.
+Flag/unflag tile with right mouse button.
+Restart game with middle mouse button.
+
+Easy: 9x9:10
+Medium:16x16:40
+Hard:27x20:101
+Concentric:
+Starts with 3x3:2, increases 2x2 every round with increasing amount of mines.
+
+If won And gameMode = "Concentric" And KeyHit(KEY_MMB) Then
+	Prepare1(rows+2,cols+2,mines+Int((rows+cols)/3))
+Elseif won Or lost And KeyHit(KEY_MMB)
+	Prepare1(rows,cols,mines)
+End
+If KeyHit(KEY_MMB) Prepare1(rows,cols,mines)
